@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Meme Generator</h1>
+
+    <div class="card">
+      <!-- Controls Section -->
+      <div class="left-panel">
+        <label class="upload-label">Upload Image</label>
+        <input id="imgInput" type="file" accept="image/*" class="file-input">
+
+        <div class="controls">
+          <input id="topText" type="text" placeholder="Top Text">
+          <input id="bottomText" type="text" placeholder="Bottom Text">
+
+          <label>Font Size</label>
+          <input id="fontSize" type="number" value="32">
+
+          <label>Text Color</label>
+          <input id="color" type="color" value="#ffffff">
+
+          <h3>Position Controls</h3>
+          <div class="slider-group">
+            <label>Top Text X</label>
+            <input id="topX" type="range" min="0" max="600" value="300">
+          </div>
+          <div class="slider-group">
+            <label>Top Text Y</label>
+            <input id="topY" type="range" min="20" max="600" value="50">
+          </div>
+          <div class="slider-group">
+            <label>Bottom Text X</label>
+            <input id="bottomX" type="range" min="0" max="600" value="300">
+          </div>
+          <div class="slider-group">
+            <label>Bottom Text Y</label>
+            <input id="bottomY" type="range" min="100" max="800" value="550">
+          </div>
+        </div>
+
+        <div class="btns">
+          <button id="downloadBtn">Download Meme</button>
+          
+          <button id="resetBtn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="right-panel">
+        <canvas id="memeCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
